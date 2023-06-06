@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JAZIRA</title>
+    <style>
+        html,
+        body {
+          height: 100%;
+        }
+      </style>
+</head>
+<body>
+
+
+<div class="flex items-center justify-center">
+    <h1 id="text" class="px-4 py-2 mt-10 text-blue-500 font-semibold rounded">Lamabrktich hna rak zam</h1>
+</div>
+<div class="flex items-center justify-center">
+    <button id="playButton" class="px-4 py-2 mt-10 bg-blue-500 hover:bg-blue-800 text-white font-semibold rounded">Lamabrktich hna rak zam</button>
+</div>
+
+<script>
+    // Get a reference to the play button
+    const playButton = document.getElementById("playButton");
+
+    // Get a reference to the text element
+    const textElement = document.getElementById("text");
+
+    // Define the audio file URL
+    const audioFile = "tts.mp3";
+
+    // Create an audio element
+    const audio = new Audio(audioFile);
+
+    // Add an event listener to the button
+    playButton.addEventListener("click", () => {
+        // Replace the text with "Hamid"
+        textElement.textContent = "W lasditi site rak zaml";
+        textElement.classList.add("text-red-500");
+
+        // Play the audio
+        audio.play();
+    });
+</script>
+    
+</div>
+</body>
+</html>
